@@ -5,13 +5,8 @@ services:
     build: ./docker
     container_name: mocky
     volumes:
-      - ./docker/scripts:/app/scripts
+      - ./scripts:/app/scripts
+      - ./files:/app/files
     ports:
       - "${MOCKY_PORT:-3000}:3000"
-    networks:
-        - common_link
     command: node scripts/mocky.js
-
-networks:
-  common_link:
-    external: true

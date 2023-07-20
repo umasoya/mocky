@@ -3,27 +3,31 @@
  */
 
 const url = '/404';
-const body = '404 Not Found';
+const response = {
+    status: 404,
+    header: { 'Content-Type': 'text/plain' },
+    body: '404 Not Found'
+};
 
 module.exports = [
     {
         url: url,
         method: 'GET',
-        res: body
+        res: response
     },
     {
         url: url,
         method: 'POST',
-        res: body
+        res: response
     },
     {
         url: url,
         method: 'PUT',
-        res: body
+        res: response
     },
     {
         url: url,
         method: 'DELETE',
-        res: body
+        res: response
     },
 ];
