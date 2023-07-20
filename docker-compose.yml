@@ -4,6 +4,7 @@ services:
   mocky:
     build: ./docker
     container_name: mocky
+    init: true
     volumes:
       - ./scripts:/app/scripts
       - ./files:/app/files

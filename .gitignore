@@ -1,8 +1,10 @@
 # files/
 !files/sample.json
+!files/sample.xml
 files/*
 # scripts/routed
 !scripts/routes/200.js
 !scripts/routes/404.js
 !scripts/routes/json.js
+!scripts/routes/xml.js
 scripts/routes/*.js

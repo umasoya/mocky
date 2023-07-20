@@ -3,7 +3,7 @@
  * POST: POSTされたjsonをオウム返しする
  */
 const fs = require('fs');
-const header = { 'Content-Type': 'application/json' };
+const header = { 'Content-Type': 'application/json; charset=utf-8' };
 module.exports = [
     // filesディレクトリにある与えられたファイル名のファイルの中身を返す
     {
