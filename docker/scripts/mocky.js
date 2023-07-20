@@ -1,17 +1,13 @@
-var mocky = require('mocky');
+const mocky = require('mocky');
 
-mocky.createServer([
-    {
-        // 投げられたjsonをオウム返し
-        url: '/json',
-        method: 'post',
-        res: function(req, res, callback) {
-            var json = JSON.parse(req.body);
-            callback(null, {
-                status: 200,
-                headers: {'Content-type': 'application/json'},
-                body: JSON.stringify(json)
-            });
-        }
-    },
-]).listen(3000);
+const paths = [
+    ...require('./routes/200'),
+    ...require('./routes/404'),
+    ...require('./routes/json')
+];
+
+// all requests will be logged into console
+mocky.recorder.start({print: true});
+
+// start server
+mocky.createServer(paths).listen(3000);
