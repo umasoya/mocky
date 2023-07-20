@@ -22,6 +22,8 @@ docker compose up -d
 | /404  | GET<br />POST<br />PUT<br />DELETE | 404          | `404 Not Found` を返します                                                                                                                 |
 | /json | GET                                | 200<br />500 | `filename` で渡したファイルを'files'ディレクトリから探し､その中身をjsonとして返します<br />ファイルが見つからない場合は500エラーを返します |
 | /json | POST                               | 200<br />500 | POSTしたjsonをオウム返しします<br />何もPOSTしなかったりjson以外をPOSTした場合は500エラーを返します                                        |
+| /xml  | GET                                | 200<br />500 | `filename` で渡したファイルを'files'ディレクトリから探し､その中身をxmlとして返します<br />ファイルが見つからない場合は500エラーを返します  |
+| /xml  | POST                               | 200<br />500 | POSTしたxmlをオウム返しします<br />~~何もPOSTしなかったりxml以外をPOSTした場合は500エラーを返します~~                                      |
 
 ## example
 
