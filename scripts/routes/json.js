@@ -32,7 +32,7 @@ module.exports = [
     {
         url: '/json',
         method: 'POST',
-        res: function(req, res, callback) {
+        res: (req, res, callback) => {
             try {
                 callback(null, {
                     status: 200,

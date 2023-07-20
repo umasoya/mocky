@@ -36,6 +36,8 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "John", "email": "
 
 **他のdockerコンテナからPOST**
 
+対象のコンテナとmockyが同一のdockerネットワークに接続している前提｡
+
 ```sh
 curl -X POST -H "Content-Type: application/json" -d '{"name": "John", "email": "john@test.com"}' mocky:3000/json
 # {"name":"John","email":"john@test.com"}
