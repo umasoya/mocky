@@ -1,8 +1,7 @@
 const mocky = require('mocky');
 
 const paths = [
-    ...require('./routes/200'),
-    ...require('./routes/404'),
+    ...require('./routes/status_code'),
     ...require('./routes/json')
 ];
 
