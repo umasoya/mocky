@@ -1,4 +1,4 @@
-docker-compose.*.yml
+compose.*.yml
 # files/
 files/*
 !files/sample.json
