@@ -1,4 +1,5 @@
 compose.*.yml
+.env*
 # files/
 files/*
 !files/sample.json
